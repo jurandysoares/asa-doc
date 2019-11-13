@@ -15,18 +15,30 @@
 * `/var/log/squid/cache.log`
 
 <a href="#proxy">
+  
 ## Definir o que é um servidor proxy
+* O que é um servidor proxy?
+* Para que server?
 
-* [Instalar servidor *squid* no Ubuntu servidor](#install)
+<a href="#install">
+  
+## Instalar servidor *squid* no Ubuntu servidor
+
+  sudo apt update
+  sudo apt install -y squid
 
 <a href="#porta">
+  
 ## Configurar porta padrão do Squid para 8080
 
 <a href="#navegador">
+  
 ## Configurar navegadores para acessarem servidor proxy
 
 <a href="#log">
+  
 ## Analisar log de acesso ao servidor proxy
 
 <a href="#acl">
+  
 ## Criação de lista de controle de acesso (ACL) no servidor proxy
