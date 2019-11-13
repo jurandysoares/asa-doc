@@ -23,13 +23,33 @@
 <a href="#install">
   
 ## Instalar servidor *squid* no Ubuntu servidor
+* `sudo apt update`
+* `sudo apt install -y squid`
 
-  sudo apt update
-  sudo apt install -y squid
+Após a instalação, recomendo a limpeza do arquivo de configuração, isto é, 
+remover todos os comentários e linhas em branco. Para isso, vamos utilizar o 
+editor [sed](https://aurelio.net/sed/).
+
+Vamos utilizar expressões regulares para fazer a limpeza. Tenha ciência que:
+* `/` significa procurar no sed;
+* `^` significa início da linha;
+* `$` significa fim de linha.
+
+Assim:
+* `/^#`: significa procurar linhas que comecem com comentário;
+* `/^$`: significa procurar linhas em branco (só com um ENTER).
+
+Por fim, `/d` no sed significa excluir (*delete* em Inglês).
+
+Dito isso, execute:
+* `sed -e '/^#/d' -e '/^$/d' /etc/squid/squid.conf`
+
+
 
 <a href="#porta">
   
 ## Configurar porta padrão do Squid para 8080
+
 
 <a href="#navegador">
   
