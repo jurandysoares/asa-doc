@@ -86,7 +86,11 @@ refresh_pattern .               0       20%     4320
 <a href="#porta">
   
 ## Configurar porta padrão do Squid para 8080
-Podemos utilizar o 
+Podemos utilizar o *sed* para trocar a porta padrão, ou utilize 
+seu editor predileto ([nano](http://www.bosontreinamentos.com.br/linux/15-exemplos-de-uso-do-editor-de-textos-nano-no-linux/), [vim](https://blog.caelum.com.br/desvendando-o-editor-vim/)?):
+* `sed -i 's/^http_port 3128/http_port 8080/' /etc/squid/squid.conf`
+
+Lembre-se depois de fazer o squid reler seu arquivo de configuração.
 
 <a href="#navegador">
   
